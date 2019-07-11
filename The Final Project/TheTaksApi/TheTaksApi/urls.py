@@ -14,8 +14,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from rest_framework_jwt.views import refresh_jwt_token, obtain_jwt_token
+
+from tasks import views as tks
+from profiles import views as pfs
+
+router = routers.DefaultRouter()
+router.register('projects-list', tks.ProjectsList, base_name='projects-list')
+router.register('tasks-list', tks.TasksList, base_name='tasks-detail')
+router.register('profiles-list', pfs.ProfilesList, base_name='profiles-list')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('', include(router.urls)),
+    path('auth/', include('rest_auth.urls')),
+    path('auth/signup/', include('rest_auth.registration.urls')),
+    path('auth/refresh-token/', refresh_jwt_token),
 ]
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('projects', tks.ProjectsList.as_view(), name=tks.ProjectsList.name),
+#     path('projects/<int:pk>', tks.ProjectDetail.as_view(), name=tks.ProjectDetail.name),
+#     path('tasks/', tks.TasksList.as_view(), name=tks.TasksList.name),
+#     path('tasks/<int:pk>', tks.TaskDetail.as_view(), name=tks.TaskDetail.name),
+#     path('profiles/', pfs.ProfilesList.as_view(), name=pfs.ProfilesList.name),
+#     path('profiles/', pfs.ProfileDetail.as_view(), name=pfs.ProfileDetail.name),
+# ]

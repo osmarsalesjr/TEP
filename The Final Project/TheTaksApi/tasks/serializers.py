@@ -2,15 +2,17 @@ from rest_framework import serializers
 from tasks.models import Task, Project
 
 
-class TaskSerializer(serializers.HyperlinkedModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
+    project = serializers.StringRelatedField(many=False)
+
     class Meta:
         model = Task
-        fields = ('task_name', 'description', 'date_of_creation', 'deadline', 'project')
+        fields = ('pk', 'task_name', 'description', 'date_of_creation', 'deadline', 'project')
 
 
-class ProjectSerializer(serializers.HyperlinkedModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     tasks = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Project
-        fields = ('project_name', 'description', 'date_of_creation', 'tasks')
+        fields = ('pk', 'project_name', 'description', 'date_of_creation', 'tasks')
