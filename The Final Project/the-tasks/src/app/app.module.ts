@@ -8,6 +8,10 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TasksComponent,
     TaskDetailsComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjectsComponent,
+    ProjectDetailsComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
