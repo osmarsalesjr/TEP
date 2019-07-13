@@ -15,13 +15,12 @@ import { Router, CanActivate } from '@angular/router';
 export class AuthService {
 
   private apiRoot = 'http://127.0.0.1:8000/auth/';
-  token: string;
 
   constructor(private http: HttpClient) { }
 
   private setSession(authResult){
-    this.token = authResult.token;
-    const payload = <JWTPayload> jwtDecode(this.token);
+    const token = authResult.token;
+    const payload = <JWTPayload> jwtDecode(token);
     const expiresAt = moment.unix(payload.exp);
 
     localStorage.setItem('token', authResult.token);
@@ -62,7 +61,7 @@ export class AuthService {
     if (moment().isBetween(this.getExpiration().subtract(1, 'days'), this.getExpiration())) {
       return this.http.post(
         this.apiRoot.concat('refresh-token/'),
-        { token: this.token }
+        { token: this.getToken() }
       ).pipe(
         tap(response => this.setSession(response)),
         shareReplay(),
@@ -118,7 +117,7 @@ export class AuthGuard implements CanActivate {
       return true;
     } else {
       this.authService.logout();
-      this.router.navigate(['login']);
+      this.router.navigate(['/login']);
 
       return false;
     }

@@ -11,7 +11,7 @@
   <li *ngFor="let project of projects">
     <h2>
       {{ project.project_name }}
-      <button (click)="deleteProject(project.id)">Delete</button>
+      <button (click)="deleteProject(project.id)">Delete Project</button>
     </h2>
     <div>
       <p><strong>Description</strong>: {{ project.description }}</p>
@@ -19,8 +19,8 @@
     </div>
   </li>
 </ul>
-<input #project_name type='text' placeholder='Project Name'>
-<input #description type='text' placeholder='Project Description'>
+<input #project_name type='text' placeholder='Project Name'><br/>
+<input #description type='text' placeholder='Project Description'><br/>
 <button (click)="addProject(project_name.value, description.value)">Add Project</button>
 <p>{{ error?.message }}</p>
 <p *ngIf="error">{{ error?.error | json }}</p>

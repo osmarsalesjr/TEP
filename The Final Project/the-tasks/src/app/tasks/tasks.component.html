@@ -4,8 +4,18 @@
       <a routerLink="/detail/{{task.id}}">
         <span class="badge">
           {{ task.id }}
-        </span> {{ task.description }}
+        </span> {{ task.task_name }}
       </a>
+      <div>
+        <p><strong>Description</strong>: {{ task.description }}</p>
+        <p><strong>Deadline</strong>: {{ task.deadline }}</p>
+      </div>
+      <button (click)="deleteTask(task.id)">Delete Task</button>
     </li>
   </ul>
+
+<input #task_name type='text' placeholder='Task Name'><br/>
+<input #description type='text' placeholder='Description'><br/>
+<input #deadline type='datetime' placeholder='Deadline'><br/>
+<button (click)="addTask(task_name.value, description.value, deadline.value)">Add Task</button>
 </div>

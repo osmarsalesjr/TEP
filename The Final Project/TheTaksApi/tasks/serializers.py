@@ -3,11 +3,9 @@ from tasks.models import Task, Project
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    project = serializers.StringRelatedField(many=False)
-
     class Meta:
         model = Task
-        fields = ('pk', 'task_name', 'description', 'date_of_creation', 'deadline', 'project')
+        fields = ('pk', 'task_name', 'description', 'date_of_creation', 'deadline')
 
 
 class ProjectSerializer(serializers.ModelSerializer):

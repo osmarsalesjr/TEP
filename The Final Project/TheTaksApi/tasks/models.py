@@ -16,7 +16,6 @@ class Task(models.Model):
     description = models.CharField(max_length=120)
     date_of_creation = models.DateTimeField(auto_now_add=True)
     deadline = models.DateTimeField()
-    project = models.ForeignKey('Project', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.task_name

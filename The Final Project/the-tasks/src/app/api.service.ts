@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Project } from './project';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class ApiService {
 
@@ -28,8 +26,8 @@ export class ApiService {
     return this.http.get(this.apiRoot.concat('tasks-list/'));
   }
 
-  createTask(task_name: string, description: string, deadline: Date, project: Project){
-    return this.http.post(this.apiRoot.concat('tasks-list/'), {task_name, description, deadline, project});
+  createTask(task_name: string, description: string, deadline: Date){
+    return this.http.post(this.apiRoot.concat('tasks-list/'), {task_name, description, deadline});
   }
 
   deleteTask(id: number){

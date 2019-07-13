@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../task';
+import { Task } from '../task.interface';
 import { ApiService } from '../api.service';
-import { Project } from '../project';
 
 @Component({
   selector: 'app-tasks',
@@ -23,8 +22,8 @@ export class TasksComponent implements OnInit {
     );
   }
 
-  addTask(task_name: string, description: string, deadline: Date, project: Project){
-    this.api.createTask(task_name, description, deadline, project).subscribe(
+  addTask(task_name: string, description: string, deadline: Date){
+    this.api.createTask(task_name, description, deadline).subscribe(
       (task: Task) => this.tasks.push(task),
       (error: any) => this.error = error
     );

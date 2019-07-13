@@ -5,20 +5,29 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheTaksApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TheTaksApi/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheTaksApi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TheTaksApi/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/dashboard/dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/mock-tasks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/mock-tasks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/projects/projects.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/projects/projects.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/projects/projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/projects/projects.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/task-details/task-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/task-details/task-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/task.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/task.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/tasks/tasks.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/tasks/tasks.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/app/tasks/tasks.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/app/tasks/tasks.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-tasks/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-tasks/src/index.html" afterDir="false" />
     </list>
@@ -30,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TheTaksApi/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="136">
+              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding>
                 <element signature="e#311#320#0" expanded="true" />
               </folding>
@@ -42,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -57,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="289">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -66,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TheTaksApi/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="261">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#634#666#0" expanded="true" />
               </folding>
@@ -94,10 +103,10 @@
         <option value="$PROJECT_DIR$/tasks/views.py" />
         <option value="$PROJECT_DIR$/profiles/views.py" />
         <option value="$PROJECT_DIR$/profiles/serializers.py" />
+        <option value="$PROJECT_DIR$/tasks/serializers.py" />
+        <option value="$PROJECT_DIR$/tasks/models.py" />
         <option value="$PROJECT_DIR$/TheTaksApi/urls.py" />
         <option value="$PROJECT_DIR$/TheTaksApi/settings.py" />
-        <option value="$PROJECT_DIR$/tasks/models.py" />
-        <option value="$PROJECT_DIR$/tasks/serializers.py" />
       </list>
     </option>
   </component>
@@ -115,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,18 +135,17 @@
             <path>
               <item name="TheTaksApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheTaksApi" type="462c0819:PsiDirectoryNode" />
-              <item name="profiles" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheTaksApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheTaksApi" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="TheTaksApi" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,16 +206,18 @@
       <workItem from="1562873029310" duration="10143000" />
       <workItem from="1562900437541" duration="7217000" />
       <workItem from="1562952513847" duration="11241000" />
+      <workItem from="1562984631520" duration="938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28601000" />
+    <option name="totallyTimeSpent" value="29539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -220,7 +231,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -273,10 +284,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TheTaksApi/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="261">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#634#666#0" expanded="true" />
           </folding>
@@ -285,27 +313,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TheTaksApi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="136">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding>
             <element signature="e#311#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
