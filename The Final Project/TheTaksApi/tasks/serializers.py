@@ -11,8 +11,6 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    tasks = serializers.StringRelatedField(many=True)
-
     class Meta:
         model = Project
-        fields = ('pk', 'project_name', 'description', 'date_of_creation', 'tasks')
+        fields = ('pk', 'project_name', 'description', 'date_of_creation')

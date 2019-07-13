@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth',
     'rest_auth.registration',
+    'corsheaders',
     'rest_framework',
     'profiles',
     'tasks',
@@ -60,7 +61,12 @@ REST_FRAMEWORK = {
     'NON_FIELD_ERRORS_KEY': 'global',
 }
 
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+)
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

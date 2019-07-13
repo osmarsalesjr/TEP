@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
-import { TaskService } from '../task.service';
+import { ApiService } from '../api.service';
+import { Project } from '../project';
 
 @Component({
   selector: 'app-tasks',
@@ -10,20 +11,31 @@ import { TaskService } from '../task.service';
 export class TasksComponent implements OnInit {
 
   tasks: Task[];
+  error: any;
   /*selectedTask: Task;*/
 
-  constructor(private taskService: TaskService) { }
-
-  getTasks(): void{
-    this.taskService.getTasks().subscribe(tasks => this.tasks = tasks);
-  }
-
+  constructor(private api: ApiService) { }
+  
   ngOnInit() {
-    this.getTasks();
+    this.api.getTasksList().subscribe(
+      (tasks: Task[]) => this.tasks = tasks,
+      (error: any) => this.error = error
+    );
   }
 
-  /*onSelect(task: Task): void{
-    this.selectedTask = task;
-  }*/
+  addTask(task_name: string, description: string, deadline: Date, project: Project){
+    this.api.createTask(task_name, description, deadline, project).subscribe(
+      (task: Task) => this.tasks.push(task),
+      (error: any) => this.error = error
+    );
+  }
 
+  deleteTask(id: number){
+    this.api.deleteProject(id).subscribe(
+      (success: any) => this.tasks.splice(
+        this.tasks.findIndex(task => task.id === id)
+      ),
+      (error: any) => this.error = error
+    );
+  }
 }

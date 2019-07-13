@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  error; any;
+  error: any;
 
   constructor(private authService: AuthService, private router: Router) { }
 

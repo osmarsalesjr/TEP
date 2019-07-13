@@ -10,19 +10,18 @@ import * as moment from 'moment';
 import { environment } from '../environments/environment';
 import { Router, CanActivate } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class AuthService {
 
   private apiRoot = 'http://127.0.0.1:8000/auth/';
+  token: string;
 
   constructor(private http: HttpClient) { }
 
   private setSession(authResult){
-    const token = authResult.token;
-    const payload = <JWTPayload> jwtDecode(token);
+    this.token = authResult.token;
+    const payload = <JWTPayload> jwtDecode(this.token);
     const expiresAt = moment.unix(payload.exp);
 
     localStorage.setItem('token', authResult.token);
@@ -63,7 +62,7 @@ export class AuthService {
     if (moment().isBetween(this.getExpiration().subtract(1, 'days'), this.getExpiration())) {
       return this.http.post(
         this.apiRoot.concat('refresh-token/'),
-        { token: localStorage.getItem('token') }
+        { token: this.token }
       ).pipe(
         tap(response => this.setSession(response)),
         shareReplay(),
