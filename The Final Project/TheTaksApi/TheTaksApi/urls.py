@@ -16,13 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from rest_framework_jwt.views import refresh_jwt_token, obtain_jwt_token
-
-from tasks import views as tks
+from rest_framework_jwt.views import refresh_jwt_token
+from tasks.views import ProjectViewSet, TaskViewSet
 
 router = routers.DefaultRouter()
-router.register('projects-list', tks.ProjectsList, base_name='projects-list')
-router.register('tasks-list', tks.TasksList, base_name='tasks-detail')
+router.register('projects', ProjectViewSet, base_name='projects')
+router.register('tasks', TaskViewSet, base_name='tasks')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

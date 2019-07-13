@@ -35,6 +35,14 @@ export class ProjectsComponent implements OnInit {
       ),
       (error: any) => this.error = error
     );
+
+    location.replace('projects-list');
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('expires_at');
+    location.replace('login')
   }
 
 }

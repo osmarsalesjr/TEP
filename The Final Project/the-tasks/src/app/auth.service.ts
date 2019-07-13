@@ -54,7 +54,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('expires_at');
-    location.reload();
+    location.replace('login');
   }
 
   refreshToken() {
@@ -113,11 +113,10 @@ export class AuthGuard implements CanActivate {
   canActivate() {
     if (this.authService.isLoggedIn()) {
       this.authService.refreshToken();
-
       return true;
     } else {
       this.authService.logout();
-      this.router.navigate(['/login']);
+      this.router.navigate(['login']);
 
       return false;
     }

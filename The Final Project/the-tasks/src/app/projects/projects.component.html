@@ -1,5 +1,8 @@
 <nav>
   <a routerLink="/projects-list">Home</a>
+  <a routerLink="/tasks-list">Tasks</a>
+  <a routerLink="/dashboard">Dashboard</a>
+  <div style="text-align:right"><button (click)="logout()">Logout</button></div>
 </nav>
 
 <div style="text-align:center">
@@ -11,7 +14,6 @@
   <li *ngFor="let project of projects">
     <h2>
       {{ project.project_name }}
-      <button (click)="deleteProject(project.id)">Delete Project</button>
     </h2>
     <div>
       <p><strong>Description</strong>: {{ project.description }}</p>

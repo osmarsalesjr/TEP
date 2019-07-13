@@ -30,11 +30,18 @@ export class TasksComponent implements OnInit {
   }
 
   deleteTask(id: number){
-    this.api.deleteProject(id).subscribe(
+    this.api.deleteTask(id).subscribe(
       (success: any) => this.tasks.splice(
         this.tasks.findIndex(task => task.id === id)
       ),
       (error: any) => this.error = error
     );
+    location.replace('tasks-list');
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('expires_at');
+    location.replace('login')
   }
 }

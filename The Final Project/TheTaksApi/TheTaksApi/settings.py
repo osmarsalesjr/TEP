@@ -47,22 +47,6 @@ INSTALLED_APPS = [
     'tasks',
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ),
-    'NON_FIELD_ERRORS_KEY': 'global',
-}
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
-)
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -94,8 +78,37 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'TheTaksApi.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+)
+
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'NON_FIELD_ERRORS_KEY': 'global',
+}
+
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+
+# JWT settings
+REST_USE_JWT = True
+
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_EXPIRATION_DELTA': timedelta(days=2),
+}
+
 
 DATABASES = {
     'default': {
@@ -135,10 +148,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-JWT_AUTH = {
-    'JWT_ALLOW_REFRESH': True,
-    'JWT_EXPIRATION_DELTA': timedelta(days=2),
-}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -146,9 +155,3 @@ JWT_AUTH = {
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-SITE_ID = 1
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-# JWT settings
-
-REST_USE_JWT = True

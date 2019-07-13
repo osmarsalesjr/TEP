@@ -7,24 +7,11 @@ from tasks.serializers import TaskSerializer, ProjectSerializer
 
 
 # Create your views here.
-class ProjectsList(viewsets.ModelViewSet):
+class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-    name = 'projects-list'
 
 
-# class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Project.objects.all()
-#     serializer_class = ProjectSerializer
-#     name = 'project-detail'
-
-
-class TasksList(viewsets.ModelViewSet):
+class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    name = 'tasks-list'
-
-# class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
-#    queryset = Task.objects.all()
-#    serializer_class = TaskSerializer
-#    name = 'tasks-detail'

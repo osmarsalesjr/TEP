@@ -1,3 +1,16 @@
+<nav>
+  <a routerLink="/projects-list">Home</a>
+  <a routerLink="/tasks-list">Tasks</a>
+  <a routerLink="/dashboard">Dashboard</a>
+  <div style="text-align:right"><button (click)="logout()">Logout</button></div>
+</nav>
+
+<div style="text-align:center">
+  <h1>
+    List of Tasks
+  </h1>
+</div>
+
 <div>
   <ul class="tasks">
     <li *ngFor="let task of tasks">
@@ -5,17 +18,14 @@
         <span class="badge">
           {{ task.id }}
         </span> {{ task.task_name }}
-      </a>
-      <div>
         <p><strong>Description</strong>: {{ task.description }}</p>
         <p><strong>Deadline</strong>: {{ task.deadline }}</p>
-      </div>
-      <button (click)="deleteTask(task.id)">Delete Task</button>
+      </a>
     </li>
   </ul>
+</div>
 
 <input #task_name type='text' placeholder='Task Name'><br/>
 <input #description type='text' placeholder='Description'><br/>
-<input #deadline type='datetime' placeholder='Deadline'><br/>
+<input #deadline type='datetime-local' placeholder='Deadline'><br/>
 <button (click)="addTask(task_name.value, description.value, deadline.value)">Add Task</button>
-</div>

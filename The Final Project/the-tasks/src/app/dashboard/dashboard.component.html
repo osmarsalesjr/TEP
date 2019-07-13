@@ -1,6 +1,13 @@
-<h3>Top Tasks</h3>
+<nav>
+  <a routerLink="/projects-list">Home</a>
+  <a routerLink="/tasks-list">Tasks</a>
+  <a routerLink="/dashboard">Dashboard</a>
+  <div style="text-align:right"><button (click)="logout()">Logout</button></div>
+</nav>
+
+<h2>Top Tasks</h2>
 <div class="grid grid-pad">
-  <a *ngFor="let task of tasks" class="col-1-4" routerLink="/detail/{{task.id}}">
+  <a *ngFor="let task of tasks" class="col-1-4">
     <div class="module task">
       <h4>{{task.task_name}}</h4>
     </div>

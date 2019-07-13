@@ -22,4 +22,10 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('expires_at');
+    location.replace('login')
+  }
+
 }
